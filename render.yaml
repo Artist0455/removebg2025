@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: bg-remove-bot
+    env: python
+    plan: starter                # Starter plan, aap apne requirement ke hisaab se change kar sakte ho
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        fromSecret: BOT_TOKEN    # Render secret
+      - key: BG_API_KEY
+        fromSecret: BG_API_KEY   # Render secret
+    autoDeploy: true
