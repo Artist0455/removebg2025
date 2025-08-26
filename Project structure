@@ -1,0 +1,5 @@
+bg_remove_bot/
+│
+├─ main.py           # Aapka bot code (updated)
+├─ requirements.txt  # Dependencies
+└─ Procfile          # Render deployment instructions
